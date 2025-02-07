@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.container_outgoing {
+  justify-content: flex-end;
+}
+
+.message {
+  position: relative;
+  width: fit-content;
+  max-width: 90%;
+  padding: 7px 9px;
+  border-radius: 7px;
+  background-color: var(--color-green-200);
+  box-shadow: 0px 1px 0.5px 0.13px rgba(11, 20, 26, 0.13);
+}
+
+.tail {
+  display: none;
+  position: absolute;
+  top: 0px;
+}
+
+.container_outgoing + .container_incoming,
+.container_incoming + .container_outgoing,
+.container_outgoing:first-child {
+  .message {
+    border-radius: 7px 0px 7px 7px;
+  }
+
+  .tail {
+    right: -8px;
+    display: block;
+    color: var(--color-green-200);
+  }
+}
+
+.container_incoming:first-child,
+.container_outgoing + .container_incoming {
+  .message {
+    border-radius: 0px 7px 7px 7px;
+  }
+
+  .tail {
+    display: block;
+    right: unset;
+    left: -8px;
+    color: var(--color-white);
+    transform: rotateY(180deg);
+  }
+}
+
+.replyContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.6rem;
+  padding: 0.3rem;
+  border-left: 5px solid;
+  border-color: var(--color-blue-200);
+
+  border-radius: 7px;
+  font-size: 1rem;
+  color: var(--color-blue-300);
+  background-color: rgba(0, 0, 0, 0.07);
+
+  .replyTitle {
+    color: var(--color-blue-200);
+  }
+}
+
+.replyTitle {
+  font-weight: bold;
+}
+
+.reply_incoming {
+  border-color: var(--color-green-100);
+
+  .replyTitle {
+    color: var(--color-green-100);
+  }
+}
+
+.replyArrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  padding-right: 5px;
+  border-radius: 7px;
+  color: var(--color-blue-100);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(255, 255, 255, 0.79) 40%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.message:hover .replyArrow {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.message_incoming {
+  background-color: var(--color-white);
+  .text {
+    padding-right: 35px;
+  }
+}
+
+.message_outgoing {
+  .text {
+    padding-right: 50px;
+  }
+}
+
+.text {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.checkIcon {
+  color: var(--color-blue-100);
+}
+
+.checkIconRead {
+  color: var(--color-blue-200);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: -5px;
+}
+
+.time {
+  margin-right: 3px;
+  font-size: 11px;
+  color: var(--color-blue-300);
+}
