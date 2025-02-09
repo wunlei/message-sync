@@ -1,6 +1,6 @@
 ## Ссылка на сервис в Интернете
 
-[Ссылка](https://wunlei.github.io/message-sync/)
+[Ссылка](https://message-sync.netlify.app/)
 
 ## Запуск проекта локально
 
