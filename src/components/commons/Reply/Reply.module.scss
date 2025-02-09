@@ -1,0 +1,33 @@
+.replyContainer {
+  display: flex;
+  column-gap: 1rem;
+  width: 100%;
+  max-width: 650px;
+}
+
+.replyBody {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-bottom: 0.6rem;
+  padding: 1rem;
+  border-left: 5px solid var(--color-blue-200);
+  border-radius: 7px;
+  font-size: 1rem;
+  color: var(--color-blue-300);
+  background-color: rgba(0, 0, 0, 0.07);
+  .replyTitle {
+    color: var(--color-blue-200);
+  }
+}
+
+.replyTitle {
+  font-weight: bold;
+}
+
+.replyBody_outgoing {
+  border-color: var(--color-green-100);
+  .replyTitle {
+    color: var(--color-green-100);
+  }
+}

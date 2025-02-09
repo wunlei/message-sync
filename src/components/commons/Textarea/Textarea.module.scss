@@ -1,0 +1,19 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.input {
+  width: 100%;
+  min-height: 2rem;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: var(--color-white);
+  overflow: hidden;
+  resize: none;
+}

@@ -1,0 +1,12 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 100%;
+  max-width: 650px;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(11, 20, 26, 0.2) transparent;
+}
