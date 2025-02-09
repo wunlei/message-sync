@@ -1,0 +1,19 @@
+@use "sass:map";
+
+$breakpoints: (
+  "sm": 650px,
+);
+
+@mixin media($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "No such key: `#{$breakpoint}`. Available breakpoints: #{map.keys($breakpoints)}.";
+  }
+}
+
+@mixin border($color: transparent) {
+  border: solid 2px $color;
+}
