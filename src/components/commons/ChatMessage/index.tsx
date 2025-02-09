@@ -40,7 +40,7 @@ function ChatMessage({
             <span className={s.replyTitle}>
               {isQuoteByNumber ? number : "Вы"}
             </span>
-            <span className="">{replyMessage}</span>
+            <span>{replyMessage}</span>
           </div>
         )}
 

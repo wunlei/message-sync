@@ -1,3 +1,5 @@
+@use "@/styles/mixins";
+
 .replyContainer {
   display: flex;
   column-gap: 1rem;
@@ -6,16 +8,10 @@
 }
 
 .replyBody {
-  display: flex;
+  @include mixins.replyMessage();
   flex-grow: 1;
-  flex-direction: column;
-  margin-bottom: 0.6rem;
   padding: 1rem;
-  border-left: 5px solid var(--color-blue-200);
-  border-radius: 7px;
-  font-size: 1rem;
-  color: var(--color-blue-300);
-  background-color: rgba(0, 0, 0, 0.07);
+
   .replyTitle {
     color: var(--color-blue-200);
   }

@@ -1,3 +1,5 @@
+@use "@/styles/mixins";
+
 .container {
   display: flex;
   justify-content: flex-start;
@@ -54,17 +56,8 @@
 }
 
 .replyContainer {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.6rem;
+  @include mixins.replyMessage();
   padding: 0.3rem;
-  border-left: 5px solid;
-  border-color: var(--color-blue-200);
-
-  border-radius: 7px;
-  font-size: 1rem;
-  color: var(--color-blue-300);
-  background-color: rgba(0, 0, 0, 0.07);
 
   .replyTitle {
     color: var(--color-blue-200);
